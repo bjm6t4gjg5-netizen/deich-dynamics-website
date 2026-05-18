@@ -537,14 +537,27 @@
     100% { transform: translate(-50%, 0); opacity: 0; }
   }
 
+  /* iPad-Portrait & kleine Tablets: Single-Column setzen wir bei <= 980px schon
+     in der Hauptregel — hier nur etwas weniger Padding und kompaktere Karte */
+  @media (max-width: 980px) {
+    .hero {
+      min-height: auto;
+      padding-top: clamp(6rem, 12vw, 8rem);
+      padding-bottom: clamp(6rem, 14vw, 10rem);
+    }
+    .card-3d {
+      width: min(520px, 100%);
+    }
+  }
+
   /* iPhone / kleine Screens */
   @media (max-width: 600px) {
     .hero {
-      padding-top: clamp(5rem, 14vw, 7rem);
-      padding-bottom: clamp(8rem, 22vw, 11rem);
+      padding-top: clamp(4.5rem, 14vw, 6rem);
+      padding-bottom: clamp(7rem, 22vw, 10rem);
     }
     .content {
-      gap: 2.5rem;
+      gap: 2.2rem;
     }
     .ctas {
       flex-direction: column;
@@ -562,14 +575,47 @@
       padding: 0.32rem 0.6rem;
     }
     .sun {
-      width: 240px;
-      height: 240px;
+      width: 220px;
+      height: 220px;
+      top: 2%;
+      right: -2%;
     }
+    .cloud.c1 { width: 220px; }
+    .cloud.c2 { width: 260px; }
+    .cloud.c3 { display: none; }
     .card-inner {
       padding: 1rem 1.1rem 1.1rem;
     }
     .metric-value {
       font-size: 1.4rem;
+    }
+    .spark {
+      height: 64px;
+    }
+    .bars {
+      height: 48px;
+    }
+    .stage-labels span {
+      font-size: 0.55rem;
+    }
+    .scroll-cue {
+      display: none; /* spart Platz unter den Wellen auf Phones */
+    }
+    .lead {
+      font-size: 1rem;
+    }
+  }
+
+  /* Sehr schmale Phones (iPhone SE & co.) — Card schlanker, h1 kompakter */
+  @media (max-width: 380px) {
+    h1 {
+      font-size: 1.85rem;
+    }
+    .card-inner {
+      padding: 0.9rem 0.95rem 1rem;
+    }
+    .metric-value {
+      font-size: 1.25rem;
     }
   }
 </style>

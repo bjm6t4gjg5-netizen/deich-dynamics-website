@@ -122,6 +122,21 @@
     font: inherit;
     color: var(--color-deep);
     transition: color var(--t-fast) var(--ease);
+    min-height: 56px;
+  }
+  @media (max-width: 480px) {
+    .trigger {
+      padding: 1rem 0.25rem;
+      gap: 0.7rem;
+    }
+    .chev {
+      width: 28px;
+      height: 28px;
+    }
+    .answer {
+      padding: 0 0.25rem 1.1rem 0.25rem;
+      font-size: 0.95rem;
+    }
   }
   .trigger:hover {
     color: var(--color-tide);

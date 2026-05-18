@@ -1,0 +1,160 @@
+<!--
+  ╔═══════════════════════════════════════════════════════════════════════════╗
+  ║  Web3Forms Autoresponder-Template — Deich Dynamics Solutions              ║
+  ╠═══════════════════════════════════════════════════════════════════════════╣
+  ║                                                                           ║
+  ║  So einrichten:                                                           ║
+  ║  1. Auf https://web3forms.com/platform/forms → dein Formular auswählen   ║
+  ║  2. Tab "Settings" → "Auto Responder" → "Enable Auto Responder"           ║
+  ║  3. Subject einsetzen:                                                    ║
+  ║     Vielen Dank für Ihre Nachricht — Deich Dynamics Solutions            ║
+  ║  4. From Name: Leon Schulte                                               ║
+  ║  5. Email Body: Auf "HTML" umstellen und ALLES von <!DOCTYPE> bis         ║
+  ║     </html> hier reinkopieren                                             ║
+  ║  6. Speichern, anschließend einmal selbst über das Formular testen        ║
+  ║                                                                           ║
+  ║  Variablen, die Web3Forms ersetzt:                                        ║
+  ║    {{name}}    → der Name aus dem Formular                                ║
+  ║    {{email}}   → die Absender-E-Mail                                      ║
+  ║    {{message}} → die Nachricht                                            ║
+  ║                                                                           ║
+  ╚═══════════════════════════════════════════════════════════════════════════╝
+-->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vielen Dank für Ihre Nachricht</title>
+</head>
+<body style="margin:0;padding:0;background:#dccfb4;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#1d3f36;">
+  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background:#dccfb4;padding:32px 16px;">
+    <tr>
+      <td align="center">
+
+        <!-- Container -->
+        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="560" style="max-width:560px;width:100%;background:#f1e7cf;border-radius:14px;overflow:hidden;box-shadow:0 4px 24px rgba(29,63,54,0.08);">
+
+          <!-- Header mit Logo-Mark -->
+          <tr>
+            <td style="padding:32px 32px 0 32px;">
+              <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td style="padding-right:12px;vertical-align:middle;">
+                    <svg width="36" height="36" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <g fill="#1d3f36">
+                        <path d="M 121 21 A 82 82 0 0 1 93 181" fill="none" stroke="#1d3f36" stroke-width="14"/>
+                        <path d="M 79 179 A 82 82 0 0 1 107 18" fill="none" stroke="#1d3f36" stroke-width="14"/>
+                        <rect x="107" y="0"  width="14" height="118"/>
+                        <rect x="79"  y="82" width="14" height="118"/>
+                      </g>
+                    </svg>
+                  </td>
+                  <td style="vertical-align:middle;line-height:1.05;">
+                    <div style="font-family:Georgia,'Times New Roman',serif;font-weight:600;font-size:18px;color:#1d3f36;">Deich Dynamics</div>
+                    <div style="font-family:'Courier New',monospace;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#2a544a;">Solutions</div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Eyebrow -->
+          <tr>
+            <td style="padding:24px 32px 0 32px;">
+              <div style="font-family:'Courier New',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#2a544a;">
+                <span style="display:inline-block;width:24px;height:1px;background:#2a544a;vertical-align:middle;margin-right:8px;"></span>
+                Ihre Anfrage ist angekommen
+              </div>
+            </td>
+          </tr>
+
+          <!-- Headline -->
+          <tr>
+            <td style="padding:8px 32px 0 32px;">
+              <h1 style="margin:0;font-family:Georgia,'Times New Roman',serif;font-weight:600;font-size:28px;line-height:1.15;color:#1d3f36;letter-spacing:-0.02em;">
+                Hallo {{name}}, vielen Dank.
+              </h1>
+            </td>
+          </tr>
+
+          <!-- Body -->
+          <tr>
+            <td style="padding:18px 32px 0 32px;">
+              <p style="margin:0 0 14px 0;font-size:15px;line-height:1.6;color:#4a5d54;">
+                Ihre Nachricht über <strong style="color:#1d3f36;">deich-dynamics.com</strong> ist angekommen — und auch schon in meinem Posteingang.
+              </p>
+              <p style="margin:0 0 14px 0;font-size:15px;line-height:1.6;color:#4a5d54;">
+                Ich melde mich in der Regel <strong style="color:#1d3f36;">innerhalb von 4 Stunden</strong> persönlich bei Ihnen — meist schneller. Bei sehr dringenden Anliegen erreichen Sie mich auch direkt unter <a href="tel:+4948639984997" style="color:#1d3f36;text-decoration:underline;">+49&nbsp;4863&nbsp;9984997</a>.
+              </p>
+              <p style="margin:0;font-size:15px;line-height:1.6;color:#4a5d54;">
+                Beste Grüße aus St.&nbsp;Peter-Ording
+              </p>
+            </td>
+          </tr>
+
+          <!-- Signature -->
+          <tr>
+            <td style="padding:20px 32px 0 32px;">
+              <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td style="font-family:Georgia,'Times New Roman',serif;font-size:17px;font-weight:600;color:#1d3f36;padding-bottom:2px;">
+                    Leon Schulte
+                  </td>
+                </tr>
+                <tr>
+                  <td style="font-size:13px;color:#6d7e74;">
+                    Inhaber · Deich Dynamics Solutions
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Eingegangene Nachricht (Quote) -->
+          <tr>
+            <td style="padding:28px 32px 0 32px;">
+              <div style="border-left:3px solid #b88536;background:rgba(184,133,54,0.08);border-radius:6px;padding:14px 16px;">
+                <div style="font-family:'Courier New',monospace;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6d7e74;margin-bottom:8px;">
+                  Ihre Nachricht im Wortlaut
+                </div>
+                <div style="font-size:14px;line-height:1.55;color:#4a5d54;white-space:pre-wrap;">{{message}}</div>
+              </div>
+            </td>
+          </tr>
+
+          <!-- Wellen-Akzent -->
+          <tr>
+            <td style="padding:32px 0 0 0;">
+              <div style="background:#1d3f36;height:6px;"></div>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="background:#1d3f36;padding:20px 32px;">
+              <div style="font-size:12px;color:#b5c4b0;line-height:1.6;">
+                <strong style="color:#fff;">Deich Dynamics Solutions</strong><br>
+                FinTech &amp; Buchhaltungs-Engineering · St. Peter-Ording<br>
+                <a href="https://deich-dynamics.com" style="color:#d6e0d0;text-decoration:none;">deich-dynamics.com</a> ·
+                <a href="mailto:leon@deich-dynamics.com" style="color:#d6e0d0;text-decoration:none;">leon@deich-dynamics.com</a>
+              </div>
+            </td>
+          </tr>
+
+        </table>
+
+        <!-- Hinweis außerhalb der Karte -->
+        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="560" style="max-width:560px;width:100%;margin-top:12px;">
+          <tr>
+            <td style="padding:0 8px;text-align:center;font-size:11px;color:#6d7e74;line-height:1.5;">
+              Dies ist eine automatische Bestätigung. Sie können auf diese E-Mail antworten — sie erreicht uns direkt.
+            </td>
+          </tr>
+        </table>
+
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

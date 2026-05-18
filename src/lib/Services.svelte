@@ -288,18 +288,27 @@
     font-size: 0.98rem;
   }
 
-  @media (max-width: 520px) {
+  /* iPad-Portrait + kleine Tablets: Tabs auf volle Breite, zwei-spaltig */
+  @media (max-width: 760px) {
     .tabs {
-      display: flex;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       width: 100%;
-      flex-direction: column;
-      align-items: stretch;
+      gap: 0.3rem;
       border-radius: var(--radius);
     }
     .tabs button {
       align-items: center;
       text-align: center;
       border-radius: 999px;
+      padding: 0.65rem 0.9rem 0.7rem;
+    }
+  }
+
+  /* Phone: Tabs untereinander */
+  @media (max-width: 480px) {
+    .tabs {
+      grid-template-columns: 1fr;
     }
   }
 
@@ -309,9 +318,13 @@
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1.1rem;
   }
-  @media (max-width: 380px) {
+  @media (max-width: 480px) {
     .grid {
       grid-template-columns: 1fr;
+      gap: 0.9rem;
+    }
+    .card {
+      padding: 1.3rem 1.2rem 1.2rem;
     }
   }
 

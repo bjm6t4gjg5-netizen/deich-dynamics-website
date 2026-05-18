@@ -78,8 +78,17 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
-  @media (max-width: 420px) {
-    .stats { grid-template-columns: 1fr; }
+  @media (max-width: 480px) {
+    .stats {
+      grid-template-columns: 1fr;
+      gap: 0.7rem;
+    }
+    .stat {
+      padding: 1.1rem 1.1rem;
+    }
+    .copy p {
+      font-size: 1rem;
+    }
   }
 
   .stat {

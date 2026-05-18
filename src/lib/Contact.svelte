@@ -213,6 +213,16 @@
     .grid { grid-template-columns: 1fr; }
   }
 
+  @media (max-width: 480px) {
+    .form {
+      padding: 1.2rem 1.1rem;
+    }
+    .hours {
+      grid-template-columns: 1fr;
+      gap: 0.6rem 0;
+    }
+  }
+
   .copy p {
     color: var(--color-text-muted);
     max-width: 36em;

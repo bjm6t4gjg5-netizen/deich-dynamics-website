@@ -70,8 +70,20 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 1.2rem;
   }
-  @media (max-width: 720px) {
+  @media (max-width: 820px) {
     .grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 480px) {
+    .card {
+      padding: 1.4rem 1.3rem 1.3rem;
+    }
+    .num {
+      font-size: 2rem;
+      margin-bottom: 0.4rem;
+    }
+    h3 {
+      font-size: 1.05rem;
+    }
   }
 
   .card {

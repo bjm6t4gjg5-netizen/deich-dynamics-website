@@ -467,8 +467,28 @@
       gap: 0.9rem;
     }
     .kpi-value { font-size: 1.6rem; }
-    .row { grid-template-columns: 3.8rem 1fr auto; gap: 0.5rem; }
-    .row-value { font-size: 0.88rem; }
+    .row { grid-template-columns: 3.5rem 1fr auto; gap: 0.45rem; }
+    .row-label { font-size: 0.68rem; }
+    .row-value { font-size: 0.82rem; gap: 0.3rem; }
+    .badge { font-size: 0.6rem; padding: 0.15rem 0.36rem; }
     .saving-value { font-size: 0.98rem; }
+    .finding {
+      padding: 0.8rem 0.9rem;
+    }
+    .finding-text {
+      font-size: 0.88rem;
+    }
+  }
+
+  /* Sehr kleine Phones — Row layout kollabiert, Bars wandern unter den Label-Block */
+  @media (max-width: 380px) {
+    .row {
+      grid-template-columns: 1fr auto;
+      grid-template-areas: "label value" "bar bar";
+      gap: 0.2rem 0.6rem;
+    }
+    .row-label { grid-area: label; }
+    .row-value { grid-area: value; }
+    .row-bar { grid-area: bar; margin-top: 0.15rem; }
   }
 </style>
