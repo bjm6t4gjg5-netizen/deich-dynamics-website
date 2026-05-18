@@ -1,0 +1,279 @@
+/* =========================================================================
+   Deich Dynamics Solutions — Globale Styles & Design-Tokens
+   Inspiriert von der Nordsee / St. Peter-Ording: Wattenmeer, Dünen, Himmel.
+   ========================================================================= */
+
+/* Web-Fonts via Bunny Fonts (DSGVO-freundlich, kein Google) — muss vor allen anderen Regeln stehen */
+@import url('https://fonts.bunny.net/css?family=fraunces:400,500,600,700|inter:300,400,500,600,700|jetbrains-mono:400,500&display=swap');
+
+:root {
+  /* Palette – Logo-aligned: Sand & tiefes Deichgrün, gedeckt & corporate */
+  --color-bg: #dccfb4;            /* Sand (Logo-Hintergrund) */
+  --color-bg-2: #cdbe9f;           /* gepresster Sand */
+  --color-bg-3: #b8a98a;           /* warmer Sand-Schatten */
+  --color-surface: #f1e7cf;        /* helles Papier */
+  --color-surface-2: #faf3df;      /* fast weiß */
+  --color-cloud: #ffffff;
+
+  /* Tiefen – Logo-Hauptfarbe */
+  --color-deep: #1d3f36;           /* tiefes Deichgrün (Logo) */
+  --color-deep-2: #2a544a;         /* mittlere Tiefe */
+  --color-moss: #5a7666;           /* gedämpftes Moos */
+
+  /* Sekundär-Tokens, jetzt gedeckt */
+  --color-tide: #2a544a;
+  --color-wave: #5a7666;
+  --color-foam: #ece2c4;           /* sandiger Schaum */
+  --color-marram: #7a8a72;         /* Strandhafer */
+
+  /* Sehr sparsam genutzt */
+  --color-sea: #3d6b7a;            /* gedämpftes Meeresblau */
+  --color-sea-deep: #1d3f36;
+  --color-sea-foam: #d9dec8;
+  --color-sun: #b88536;            /* gedeckter Ocker */
+  --color-sand: #e3d5a4;
+  --color-coral: #b54c3a;          /* gedeckter Rost-Akzent */
+
+  --color-text: #1d3f36;
+  --color-text-muted: #4a5d54;
+  --color-text-soft: #6d7e74;
+  --color-line: rgba(29, 63, 54, 0.18);
+  --color-line-strong: rgba(29, 63, 54, 0.32);
+
+  /* Typo */
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-display: 'Fraunces', 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* Maße */
+  --max-w: 1180px;
+  --gutter: clamp(1.25rem, 4vw, 2.5rem);
+  --radius-sm: 8px;
+  --radius: 14px;
+  --radius-lg: 24px;
+  --shadow-sm: 0 1px 2px rgba(29, 63, 54, 0.06), 0 2px 8px rgba(29, 63, 54, 0.04);
+  --shadow: 0 4px 24px rgba(29, 63, 54, 0.08), 0 12px 40px rgba(29, 63, 54, 0.06);
+  --shadow-lg: 0 20px 60px rgba(29, 63, 54, 0.18);
+
+  /* Motion */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --t-fast: 180ms;
+  --t-med: 340ms;
+  --t-slow: 640ms;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--color-tide);
+  text-decoration: none;
+  transition: color var(--t-fast) var(--ease);
+}
+
+a:hover {
+  color: var(--color-deep);
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+::selection {
+  background: var(--color-sun);
+  color: var(--color-deep);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  color: var(--color-deep);
+  margin: 0 0 0.6em;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 6vw, 4.4rem);
+  letter-spacing: -0.025em;
+}
+
+h2 {
+  font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+}
+
+h3 {
+  font-size: clamp(1.2rem, 2vw, 1.4rem);
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding-inline: var(--gutter);
+}
+
+section {
+  position: relative;
+  padding-block: clamp(4rem, 8vw, 7rem);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-tide);
+  margin-bottom: 1rem;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 28px;
+  height: 1px;
+  background: currentColor;
+}
+
+.btn {
+  --bg: var(--color-deep);
+  --fg: #fff;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.85rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: var(--bg);
+  color: var(--fg);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  transition: transform var(--t-fast) var(--ease),
+    box-shadow var(--t-med) var(--ease),
+    background var(--t-med) var(--ease);
+  box-shadow: 0 6px 14px rgba(29, 63, 54, 0.18);
+  white-space: nowrap;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(29, 63, 54, 0.22);
+  color: #fff;
+}
+
+.btn .arrow {
+  transition: transform var(--t-fast) var(--ease);
+}
+
+.btn:hover .arrow {
+  transform: translateX(3px);
+}
+
+.btn.ghost {
+  --bg: transparent;
+  --fg: var(--color-deep);
+  border-color: var(--color-line);
+  box-shadow: none;
+}
+
+.btn.ghost:hover {
+  background: var(--color-foam);
+  color: var(--color-deep);
+}
+
+.btn.sun {
+  --bg: var(--color-sun);
+  --fg: #2a1a05;
+}
+
+/* Reveal-on-scroll utility */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 700ms var(--ease), transform 700ms var(--ease);
+}
+
+.reveal.in {
+  opacity: 1;
+  transform: none;
+}
+
+.reveal[data-delay='1'] {
+  transition-delay: 80ms;
+}
+.reveal[data-delay='2'] {
+  transition-delay: 160ms;
+}
+.reveal[data-delay='3'] {
+  transition-delay: 240ms;
+}
+.reveal[data-delay='4'] {
+  transition-delay: 320ms;
+}
+
+/* Reduzierte Bewegung */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Custom Scrollbar (subtil) */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-line);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-tide);
+}
