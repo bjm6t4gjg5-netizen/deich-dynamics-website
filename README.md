@@ -50,7 +50,7 @@ npm run check    # Type-Check via svelte-check
 
 Das Formular nutzt [Web3Forms](https://web3forms.com/) (kostenlos, unbegrenzte Nachrichten, kein Account).
 
-1. Auf https://web3forms.com/ deine Empfangs-E-Mail (`info@deich-dynamics.com`) eintragen.
+1. Auf https://web3forms.com/ deine Empfangs-E-Mail (`leon+websitemail@deich-dynamics.com`) eintragen — Plus-Address-Routing für Gmail-Filter.
 2. Du erhältst den **Access-Key** per Mail.
 3. In `src/lib/Contact.svelte` ganz oben die Konstante setzen:
    ```ts

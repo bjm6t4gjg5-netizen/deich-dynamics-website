@@ -43,7 +43,7 @@
     <span class="sep">·</span>
     <a href="./datenschutz.html">Datenschutz</a>
     <span class="sep">·</span>
-    <a href="mailto:info@deich-dynamics.com">info@deich-dynamics.com</a>
+    <a href="mailto:leon@deich-dynamics.com">leon@deich-dynamics.com</a>
   </div>
 </footer>
 

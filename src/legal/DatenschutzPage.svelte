@@ -13,7 +13,7 @@
       Leon Schulte · Deich Dynamics Solutions <em>(in Gründung)</em><br>
       [Straße und Hausnummer]<br>
       25826 St.&nbsp;Peter-Ording<br>
-      E-Mail: <a href="mailto:info@deich-dynamics.com">info@deich-dynamics.com</a><br>
+      E-Mail: <a href="mailto:leon@deich-dynamics.com">leon@deich-dynamics.com</a><br>
       Telefon: +49 4863 9984997
     </p>
 
@@ -82,7 +82,7 @@
       Löschung (Art.&nbsp;17), Einschränkung der Verarbeitung (Art.&nbsp;18),
       Daten­übertragbarkeit (Art.&nbsp;20) sowie auf Widerspruch (Art.&nbsp;21).
       Bitte richten Sie entsprechende Anfragen formlos an
-      <a href="mailto:info@deich-dynamics.com">info@deich-dynamics.com</a>.
+      <a href="mailto:leon@deich-dynamics.com">leon@deich-dynamics.com</a>.
     </p>
 
     <h2>10. Beschwerderecht bei der Aufsichts­behörde</h2>

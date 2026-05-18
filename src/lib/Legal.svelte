@@ -23,7 +23,7 @@
       <h3>Kontakt</h3>
       <p>
         Telefon: <a href="tel:+4948639984997">+49&nbsp;4863&nbsp;9984997</a><br>
-        E-Mail: <a href="mailto:info@deich-dynamics.com">info@deich-dynamics.com</a><br>
+        E-Mail: <a href="mailto:leon@deich-dynamics.com">leon@deich-dynamics.com</a><br>
         Web: <a href="https://deich-dynamics.com">deich-dynamics.com</a>
       </p>
 
@@ -86,7 +86,7 @@
         Leon Schulte · Deich Dynamics Solutions<br>
         [Straße und Hausnummer]<br>
         25826 St.&nbsp;Peter-Ording<br>
-        E-Mail: <a href="mailto:info@deich-dynamics.com">info@deich-dynamics.com</a><br>
+        E-Mail: <a href="mailto:leon@deich-dynamics.com">leon@deich-dynamics.com</a><br>
         Telefon: +49 4863 9984997
       </p>
 
@@ -153,7 +153,7 @@
         Löschung (Art.&nbsp;17), Einschränkung der Verarbeitung (Art.&nbsp;18),
         Daten­übertragbarkeit (Art.&nbsp;20) sowie auf Widerspruch (Art.&nbsp;21).
         Bitte richten Sie entsprechende Anfragen formlos an
-        <a href="mailto:info@deich-dynamics.com">info@deich-dynamics.com</a>.
+        <a href="mailto:leon@deich-dynamics.com">leon@deich-dynamics.com</a>.
       </p>
 
       <h3>10. Beschwerderecht bei der Aufsichts­behörde</h3>

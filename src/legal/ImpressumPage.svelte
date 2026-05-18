@@ -26,7 +26,7 @@
     <h2>Kontakt</h2>
     <p>
       Telefon: <a href="tel:+4948639984997">+49&nbsp;4863&nbsp;9984997</a><br>
-      E-Mail: <a href="mailto:info@deich-dynamics.com">info@deich-dynamics.com</a><br>
+      E-Mail: <a href="mailto:leon@deich-dynamics.com">leon@deich-dynamics.com</a><br>
       Web: <a href="https://deich-dynamics.com">deich-dynamics.com</a>
     </p>
 

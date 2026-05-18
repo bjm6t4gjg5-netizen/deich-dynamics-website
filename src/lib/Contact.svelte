@@ -15,7 +15,6 @@
   let phone = '';
   let company = '';
   let message = '';
-  let copyToMe = false; // „Kopie der Anfrage an mich senden"
   let honeypot = ''; // Spam-Falle: echte Nutzer lassen das Feld leer
   let sending = false;
   let sent = false;
@@ -46,7 +45,7 @@
       const body = encodeURIComponent(
         `Name: ${name}\nFirma: ${company}\nTelefon: ${phone}\nE-Mail: ${email}\n\n${message}`
       );
-      window.location.href = `mailto:info@deich-dynamics.com?subject=${subject}&body=${body}`;
+      window.location.href = `mailto:leon@deich-dynamics.com?subject=${subject}&body=${body}`;
       sent = true;
       return;
     }
@@ -54,43 +53,37 @@
     sending = true;
     try {
       // Web3Forms-Payload — deutsche Feldlabels, damit die eingehende Mail
-      // direkt verständlich ist. „Kopie an mich" → cc an den Absender.
-      const payload: Record<string, string> = {
-        access_key: WEB3FORMS_ACCESS_KEY,
-        subject: `Neue Anfrage von ${name} — deich-dynamics.com`,
-        from_name: `${name} via deich-dynamics.com`,
-        replyto: email,
-
-        // Sichtbar im Mail-Body (Reihenfolge bestimmt Anzeige in Web3Forms)
-        Name: name,
-        'E-Mail': email,
-        Telefon: phone || '—',
-        Firma: company || '—',
-        Nachricht: message,
-
-        // Anti-Spam
-        botcheck: ''
-      };
-
-      if (copyToMe) {
-        payload.cc = email;
-      }
-
+      // direkt verständlich ist. Bestätigung an Absender läuft separat über
+      // Gmail-Filter + Auto-Reply-Template (nicht über Web3Forms cc).
       const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify(payload)
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `Neue Anfrage von ${name} — deich-dynamics.com`,
+          from_name: `${name} via deich-dynamics.com`,
+          replyto: email,
+
+          // Sichtbar im Mail-Body (Reihenfolge bestimmt Anzeige in Web3Forms)
+          Name: name,
+          'E-Mail': email,
+          Telefon: phone || '—',
+          Firma: company || '—',
+          Nachricht: message,
+
+          // Anti-Spam
+          botcheck: ''
+        })
       });
       const data = await res.json();
       if (data.success) {
         sent = true;
         name = email = phone = company = message = '';
-        copyToMe = false;
       } else {
         error = data.message || 'Versand fehlgeschlagen. Bitte direkt per E-Mail melden.';
       }
     } catch (err) {
-      error = 'Verbindungsfehler. Bitte direkt per E-Mail an info@deich-dynamics.com melden.';
+      error = 'Verbindungsfehler. Bitte direkt per E-Mail an leon@deich-dynamics.com melden.';
     } finally {
       sending = false;
     }
@@ -110,7 +103,7 @@
       <ul class="info">
         <li>
           <span class="icon" aria-hidden="true">✉</span>
-          <a href="mailto:info@deich-dynamics.com">info@deich-dynamics.com</a>
+          <a href="mailto:leon@deich-dynamics.com">leon@deich-dynamics.com</a>
         </li>
         <li>
           <span class="icon" aria-hidden="true">☎</span>
@@ -171,11 +164,6 @@
         <label>
           <span>Worum geht's?</span>
           <textarea bind:value={message} rows="5" placeholder="Erzählen Sie kurz, was Sie aktuell beschäftigt — egal wie skizzenhaft." disabled={sending}></textarea>
-        </label>
-
-        <label class="check">
-          <input type="checkbox" bind:checked={copyToMe} disabled={sending} />
-          <span>Kopie der Anfrage an meine E-Mail-Adresse senden</span>
         </label>
 
         <!-- Honeypot: für Menschen versteckt, Bots füllen es aus -->
@@ -352,24 +340,6 @@
     padding: 0.6rem 0.8rem;
     margin: 0;
     font-size: 0.9rem;
-  }
-
-  .check {
-    flex-direction: row;
-    align-items: center;
-    gap: 0.6rem;
-    cursor: pointer;
-    font-size: 0.9rem;
-    color: var(--color-text-muted);
-    user-select: none;
-  }
-  .check input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
-    flex: 0 0 18px;
-    accent-color: var(--color-deep);
-    margin: 0;
-    cursor: pointer;
   }
 
   /* Visuell und für AT versteckt — bleibt für Bots auffindbar */

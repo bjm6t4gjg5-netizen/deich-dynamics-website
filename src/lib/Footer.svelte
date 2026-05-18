@@ -24,7 +24,7 @@
     <div class="legal">
       <span>© {year} Deich Dynamics Solutions</span>
       <span>·</span>
-      <a href="mailto:info@deich-dynamics.com">info@deich-dynamics.com</a>
+      <a href="mailto:leon@deich-dynamics.com">leon@deich-dynamics.com</a>
       <span>·</span>
       <a href="./impressum.html">Impressum</a>
       <span>·</span>
