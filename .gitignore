@@ -1,10 +1,2 @@
-node_modules
-dist
-dist-test*
 .DS_Store
-.vite
-vite.config.ts.timestamp-*.mjs
-*.log
-.env
-.env.*
-
+_to_delete/
