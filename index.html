@@ -3,10 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Deich Dynamics Solutions — Finanzen, Digitalisierung &amp; KI für den Mittelstand</title>
-<meta name="description" content="Saubere Zahlen, weniger Verwaltungsaufwand, bankfähige Unterlagen — und KI, die im Betrieb wirklich arbeitet. Finanzstruktur, Digitalisierung und Künstliche Intelligenz für kleine und mittlere Unternehmen in Norddeutschland.">
-<link rel="icon" type="image/png" href="assets/DDS-App-Icon.png">
-<link rel="apple-touch-icon" href="assets/DDS-App-Icon.png">
+<title>Deich Dynamics Solutions — KI, Digitalisierung &amp; Finanzen für den Mittelstand</title>
+<meta name="description" content="KI, die im Betrieb wirklich arbeitet — dazu saubere Zahlen, weniger Verwaltungsaufwand und bankfähige Unterlagen. KI, Digitalisierung und Finanzstruktur greifen ineinander: ein Gesamtsystem für kleine und mittlere Unternehmen in Norddeutschland.">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#243C38">
+<link rel="canonical" href="https://deich-dynamics.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Deich Dynamics Solutions">
+<meta property="og:title" content="Deich Dynamics Solutions — KI, Digitalisierung &amp; Finanzen für den Mittelstand">
+<meta property="og:description" content="KI, die im Betrieb wirklich arbeitet — dazu saubere Zahlen und bankfähige Unterlagen. Ein Gesamtsystem statt Silo-Lösungen.">
+<meta property="og:url" content="https://deich-dynamics.com/">
+<meta property="og:image" content="https://deich-dynamics.com/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="de_DE">
+<meta name="twitter:card" content="summary_large_image">
 <style>
   /* Schriften lokal eingebunden (DSGVO: keine Verbindung zu Google-Servern) */
   @font-face{font-family:'Source Serif 4';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/source-serif-4-latin-400-normal.woff2') format('woff2');}
@@ -62,10 +76,28 @@
   .to-top.visible{opacity:1;visibility:visible;transform:none;}
   .to-top:hover{background:var(--papier);border-color:var(--sand-dunkel);}
 
-  .hero{padding:110px 0 96px;}
-  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--sand-dunkel);margin-bottom:26px;}
-  h1{font-size:clamp(32px,5.2vw,56px);font-weight:700;line-height:1.12;letter-spacing:-.012em;max-width:19ch;}
-  .hero p{margin-top:28px;max-width:56ch;font-size:19px;color:var(--graugruen);}
+  .hero{position:relative;display:flex;align-items:flex-end;min-height:calc(100vh - 89px);min-height:calc(100svh - 89px);padding:0;overflow:hidden;}
+  .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 55%;}
+  .hero-scrim{position:absolute;inset:0;background:linear-gradient(80deg,rgba(17,29,27,.9) 0%,rgba(17,29,27,.68) 34%,rgba(17,29,27,.34) 60%,rgba(17,29,27,.08) 80%,rgba(17,29,27,0) 92%),linear-gradient(0deg,rgba(17,29,27,.5) 0%,rgba(17,29,27,0) 42%);}
+  .hero-inner{position:relative;width:100%;padding:110px 28px 104px;}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--sand-hell);margin-bottom:26px;}
+  h1{font-size:clamp(32px,4.6vw,56px);font-weight:700;line-height:1.14;letter-spacing:-.012em;max-width:17ch;color:var(--weiss);text-wrap:balance;text-shadow:0 2px 22px rgba(10,20,18,.5);}
+  .hero p{margin-top:26px;max-width:52ch;font-size:18px;color:rgba(253,253,251,.95);text-shadow:0 1px 14px rgba(10,20,18,.55);}
+  .hero .eyebrow{text-shadow:0 1px 10px rgba(10,20,18,.6);}
+  .hero .cta-row{margin-top:38px;}
+  .hero .btn-solid{background:var(--sand-dunkel);color:var(--dunkelgruen);border-color:var(--sand-dunkel);}
+  .hero .btn-solid:hover{background:var(--sand-hell);border-color:var(--sand-hell);}
+  .hero .btn-line{color:var(--weiss);border-color:rgba(253,253,251,.55);}
+  .hero .btn-line:hover{background:rgba(253,253,251,.12);border-color:var(--weiss);}
+  .hero-scroll{position:absolute;left:50%;bottom:24px;transform:translateX(-50%);color:rgba(253,253,251,.85);font-family:var(--mono);font-size:18px;line-height:1;text-decoration:none;padding:10px;animation:hero-bob 2.4s ease-in-out infinite;}
+  .hero-scroll:hover{color:var(--weiss);}
+  @keyframes hero-bob{0%,100%{transform:translate(-50%,0);}50%{transform:translate(-50%,8px);}}
+  @media(max-width:640px){
+    .hero{min-height:calc(100svh - 89px);}
+    .hero-inner{padding:96px 28px 92px;}
+    .hero p{font-size:16px;}
+    .hero-scrim{background:linear-gradient(80deg,rgba(17,29,27,.8) 0%,rgba(17,29,27,.58) 46%,rgba(17,29,27,.3) 78%,rgba(17,29,27,.16) 100%),linear-gradient(0deg,rgba(17,29,27,.62) 0%,rgba(17,29,27,.12) 50%);}
+  }
   .cta-row{margin-top:40px;display:flex;gap:14px;flex-wrap:wrap;}
   .btn{display:inline-block;font-family:var(--mono);font-size:14px;letter-spacing:.06em;padding:14px 28px;text-decoration:none;border:1px solid var(--dunkelgruen);border-radius:2px;transition:background .15s ease,color .15s ease,border-color .15s ease;}
   .btn-solid{background:var(--dunkelgruen);color:var(--weiss);}
@@ -111,10 +143,11 @@
   .ki-note{margin-top:36px;font-family:var(--mono);font-size:13px;color:var(--graugruen);max-width:78ch;line-height:1.9;}
   @media(max-width:720px){.ki-grid{grid-template-columns:1fr;}.ki-cell{padding:24px 0;}.ki-cell:nth-child(odd){border-right:none;}.ki-cell:nth-child(even){padding-left:0;}}
 
-  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;}
-  @media(max-width:720px){.about-grid{grid-template-columns:1fr;}}
-  .portrait{width:100%;max-width:340px;height:auto;display:block;margin-top:36px;border:1px solid var(--sand-hell);border-radius:2px;}
-  .portrait-caption{font-family:var(--mono);font-size:12px;color:var(--graugruen);margin-top:12px;max-width:340px;}
+  .about-grid{display:grid;grid-template-columns:5fr 6fr;gap:72px;align-items:start;}
+  .about-copy{padding-top:240px;}
+  @media(max-width:720px){.about-grid{grid-template-columns:1fr;gap:40px;}.about-copy{padding-top:0;}}
+  .portrait{width:100%;max-width:280px;height:auto;display:block;margin-top:44px;border:1px solid var(--sand-hell);border-radius:2px;}
+  .portrait-caption{font-family:var(--mono);font-size:12px;color:var(--graugruen);margin-top:12px;max-width:280px;}
   .about h2{font-size:clamp(25px,3.6vw,34px);font-weight:700;line-height:1.24;max-width:22ch;}
   .about p{color:var(--graugruen);margin-bottom:16px;}
   .facts{border-top:2px solid var(--dunkelgruen);margin-top:8px;}
@@ -130,6 +163,10 @@
   .stb p+p{margin-top:12px;}
   .stb .siegel{width:140px;height:auto;justify-self:center;}
 
+  .credo{background:var(--papier);padding:88px 0;}
+  .credo-label{font-family:var(--mono);font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--sand-dunkel);margin-bottom:24px;}
+  .credo-line{font-size:clamp(20px,2.4vw,27px);font-weight:600;line-height:1.55;color:var(--dunkelgruen);max-width:48ch;}
+
   .contact{padding:110px 0;text-align:left;}
   .contact h2{font-size:clamp(28px,4.4vw,42px);font-weight:700;max-width:22ch;line-height:1.18;}
   .contact p{margin-top:20px;color:var(--graugruen);max-width:54ch;}
@@ -137,7 +174,8 @@
   footer{border-top:1px solid var(--sand-hell);padding:34px 0 48px;}
   .foot-inner{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;}
   .foot-inner img{height:30px;width:auto;display:block;}
-  .foot-meta{font-family:var(--mono);font-size:12px;color:var(--graugruen);text-align:right;line-height:2;}
+  .foot-inner img.foot-siegel{height:58px;opacity:.92;}
+  .foot-meta{font-family:var(--mono);font-size:12px;color:var(--graugruen);text-align:center;line-height:2;}
   .foot-meta a{color:var(--graugruen);text-decoration:none;border-bottom:1px solid var(--sand-hell);}
   .foot-meta a:hover{color:var(--dunkelgruen);border-color:var(--sand-dunkel);}
   @media(max-width:720px){.foot-meta{text-align:left;}}
@@ -154,8 +192,8 @@
       <span></span><span></span><span></span>
     </button>
     <nav class="main-nav" id="main-nav" aria-label="Hauptnavigation">
-      <a href="#leistungen">Leistungen</a>
       <a href="#ki">KI</a>
+      <a href="#leistungen">Leistungen</a>
       <a href="#profil">Profil</a>
       <a href="#kanzleien">Für Kanzleien</a>
       <a class="nav-cta" href="#kontakt">Kontakt</a>
@@ -164,73 +202,43 @@
 </header>
 
 <section class="hero">
-  <div class="wrap">
-    <div class="eyebrow">Finanzen · Digitalisierung · KI für den Mittelstand</div>
+  <img class="hero-bg" src="assets/hero.jpg" alt="Deich an der Nordseeküste mit Schafen — Blick über Wellen, Deichkrone und Weg" fetchpriority="high">
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <div class="eyebrow">KI · Digitalisierung · Finanzen für den Mittelstand</div>
     <h1>Saubere Zahlen. Weniger Papierkram. Eine Bank, die Ja sagt.</h1>
-    <p>Deich Dynamics Solutions bringt Ordnung in die Finanz- und Verwaltungsprozesse kleiner und mittlerer Unternehmen — und bringt KI dorthin, wo sie sich rechnet. Mit Werkzeugen, die wir selbst bauen, und dem Blick eines Bankers, der sieben Jahre lang auf der anderen Seite des Tisches saß.</p>
+    <p>Deich Dynamics Solutions bringt KI dorthin, wo sie sich rechnet — und Ordnung in die Finanz- und Verwaltungsprozesse kleiner und mittlerer Unternehmen. Mit Werkzeugen, die wir selbst bauen, und dem Blick eines Bankers, der sieben Jahre lang auf der anderen Seite des Tisches saß.</p>
     <div class="cta-row">
       <a class="btn btn-solid" href="#kontakt">Erstgespräch vereinbaren</a>
-      <a class="btn btn-line" href="#leistungen">Leistungen ansehen</a>
-      <a class="btn btn-line" href="#ki">KI im Betrieb</a>
+      <a class="btn btn-line" href="#ki">KI im Betrieb ansehen</a>
     </div>
   </div>
+  <a class="hero-scroll" href="#auszug" aria-label="Weiter zum Inhalt scrollen">↓</a>
 </section>
 
-<div class="wrap"><hr class="rule"></div>
-
-<section class="ledger">
+<section class="ledger" id="auszug">
   <div class="wrap">
     <div class="section-label">Auszug — was sich konkret ändert</div>
     <div class="ledger-table">
       <div class="ledger-row">
-        <div class="pos">Pos. 1<br>Zeit</div>
+        <div class="pos">Pos. 1<br>KI</div>
+        <div class="soll"><h3>KI bleibt ein Schlagwort</h3>Alle reden davon, keiner im Betrieb hat Zeit auszuprobieren, was wirklich trägt. Zwischen Hype und Datenschutz-Bedenken passiert: nichts.</div>
+        <div class="haben"><h3>KI arbeitet im Alltag mit</h3>Belege lesen sich selbst ein, Schriftverkehr und Angebote entstehen in Minuten, Ihre Zahlen beantworten Fragen. Nüchtern ausgewählt, datenschutzbewusst eingeführt.</div>
+      </div>
+      <div class="ledger-row">
+        <div class="pos">Pos. 2<br>Zeit</div>
         <div class="soll"><h3>Verwaltung frisst Abende</h3>Belege in Ordnern, Verträge in Schubladen, Zahlen in fünf verschiedenen Excel-Dateien. Jeder Monatsabschluss ist Handarbeit.</div>
         <div class="haben"><h3>Prozesse laufen von allein</h3>Belege und Verträge digital erfasst, Auswertungen auf Knopfdruck. Die gewonnene Zeit gehört wieder dem Geschäft.</div>
       </div>
       <div class="ledger-row">
-        <div class="pos">Pos. 2<br>Steuer</div>
+        <div class="pos">Pos. 3<br>Steuer</div>
         <div class="soll"><h3>Der Steuerberater fragt nach</h3>Unvollständige Unterlagen, Rückfragen, Nachreichungen — und eine Kanzleirechnung, die jedes Jahr wächst.</div>
         <div class="haben"><h3>Übergabe ohne Reibung</h3>Strukturierte, DATEV-kompatible Daten. Ihre Kanzlei bekommt, was sie braucht — beim ersten Mal.</div>
       </div>
       <div class="ledger-row">
-        <div class="pos">Pos. 3<br>Bank</div>
+        <div class="pos">Pos. 4<br>Bank</div>
         <div class="soll"><h3>Der Kreditantrag stockt</h3>Die Bank will Zahlen, Planung, Sicherheitenübersicht — und bekommt einen Aktenordner, der Fragen aufwirft.</div>
         <div class="haben"><h3>Unterlagen, die überzeugen</h3>Kreditanträge und Reporting in der Form, die ein Kreditgeber erwartet. Aufbereitet von jemandem, der weiß, wie Banken lesen.</div>
-      </div>
-      <div class="ledger-row">
-        <div class="pos">Pos. 4<br>KI</div>
-        <div class="soll"><h3>KI bleibt ein Schlagwort</h3>Alle reden davon, keiner im Betrieb hat Zeit auszuprobieren, was wirklich trägt. Zwischen Hype und Datenschutz-Bedenken passiert: nichts.</div>
-        <div class="haben"><h3>KI arbeitet im Alltag mit</h3>Belege lesen sich selbst ein, Schriftverkehr und Angebote entstehen in Minuten, Ihre Zahlen beantworten Fragen. Nüchtern ausgewählt, datenschutzbewusst eingeführt.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="services" id="leistungen">
-  <div class="wrap">
-    <div class="section-label">Leistungen</div>
-    <div class="service">
-      <div class="num">Stufe 1<br>Der Einstieg</div>
-      <div>
-        <h3>Struktur-Check</h3>
-        <p>Zwei Tage, ein klares Ergebnis: Wo verlieren Sie Zeit und Geld in Ihren Finanz- und Verwaltungsprozessen — und was lohnt sich zuerst? Sie erhalten einen schriftlichen Maßnahmenplan mit Prioritäten und ein Ergebnisgespräch. Danach entscheiden Sie in Ruhe, ob und was Sie umsetzen.</p>
-        <div class="meta">Festpreis · 2 Tage · vor Ort oder remote</div>
-      </div>
-    </div>
-    <div class="service">
-      <div class="num">Stufe 2<br>Die Umsetzung</div>
-      <div>
-        <h3>Werkzeuge, die für Sie arbeiten</h3>
-        <p>Liquiditätsvorschau, Beleg- und Vertragsdigitalisierung, KI-gestützte Auswertung und Texterstellung, automatisiertes Reporting oder das komplette Unterlagenpaket für Ihren nächsten Banktermin — gebaut auf Ihre Abläufe, nicht auf ein Standardprodukt. Kein Pflichtenheft, keine Agentur-Schleifen: Analyse und Umsetzung aus einer Hand, in Wochen statt Monaten.</p>
-        <div class="meta">Projektpreis nach Umfang · DATEV-kompatibler Export inklusive</div>
-      </div>
-    </div>
-    <div class="service">
-      <div class="num">Stufe 3<br>Die Begleitung</div>
-      <div>
-        <h3>Laufende Betreuung</h3>
-        <p>Ihre Werkzeuge bleiben aktuell, Ihr Quartalsreporting steht, und vor dem nächsten Bankgespräch gehen wir die Unterlagen gemeinsam durch. Ein fester Ansprechpartner für Zahlen und Struktur — ohne die Kosten einer eigenen Stelle.</p>
-        <div class="meta">Monatlicher Festbetrag · jederzeit kündbar</div>
       </div>
     </div>
   </div>
@@ -268,6 +276,43 @@
   </div>
 </section>
 
+<section class="credo">
+  <div class="wrap">
+    <div class="credo-label">Ein System — keine Silos</div>
+    <p class="credo-line">KI, Digitalisierung und Finanzen sind bei uns keine getrennten Baustellen — sie greifen ineinander. Was die Belege liest, füttert Ihre Auswertungen; was die Zahlen ordnet, überzeugt Ihre Bank. Andere verkaufen Einzellösungen, wir bauen das Gesamtsystem — und genau das passt zu kleinen und mittleren Unternehmen.</p>
+  </div>
+</section>
+
+<section class="services" id="leistungen">
+  <div class="wrap">
+    <div class="section-label">Leistungen</div>
+    <div class="service">
+      <div class="num">Stufe 1<br>Der Einstieg</div>
+      <div>
+        <h3>Struktur-Check</h3>
+        <p>Zwei Tage, ein klares Ergebnis: Wo verlieren Sie Zeit und Geld in Ihren Finanz- und Verwaltungsprozessen — und was lohnt sich zuerst? Sie erhalten einen schriftlichen Maßnahmenplan mit Prioritäten und ein Ergebnisgespräch. Danach entscheiden Sie in Ruhe, ob und was Sie umsetzen.</p>
+        <div class="meta">Festpreis · 2 Tage · vor Ort oder remote</div>
+      </div>
+    </div>
+    <div class="service">
+      <div class="num">Stufe 2<br>Die Umsetzung</div>
+      <div>
+        <h3>Werkzeuge, die für Sie arbeiten</h3>
+        <p>KI-gestützte Auswertung und Texterstellung, Beleg- und Vertragsdigitalisierung, Liquiditätsvorschau, automatisiertes Reporting oder das komplette Unterlagenpaket für Ihren nächsten Banktermin — gebaut auf Ihre Abläufe, nicht auf ein Standardprodukt. Kein Pflichtenheft, keine Agentur-Schleifen: Analyse und Umsetzung aus einer Hand, in Wochen statt Monaten.</p>
+        <div class="meta">Projektpreis nach Umfang · DATEV-kompatibler Export inklusive</div>
+      </div>
+    </div>
+    <div class="service">
+      <div class="num">Stufe 3<br>Die Begleitung</div>
+      <div>
+        <h3>Laufende Betreuung</h3>
+        <p>Ihre Werkzeuge bleiben aktuell, Ihr Quartalsreporting steht, und vor dem nächsten Bankgespräch gehen wir die Unterlagen gemeinsam durch. Ein fester Ansprechpartner für Zahlen und Struktur — ohne die Kosten einer eigenen Stelle.</p>
+        <div class="meta">Monatlicher Festbetrag · jederzeit kündbar</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="about" id="profil">
   <div class="wrap about-grid">
     <div>
@@ -276,7 +321,7 @@
       <img class="portrait" src="assets/leon-schulte.jpg" alt="Leon Schulte, Gründer von Deich Dynamics Solutions">
       <div class="portrait-caption">Leon Schulte — Gründer</div>
     </div>
-    <div>
+    <div class="about-copy">
       <p>Leon Schulte — sieben Jahre Deutsche Bank: Firmenkundengeschäft, Handelsfinanzierung und Leasing, davon drei Jahre im Coverage internationaler Finanzinstitute in New York. Hunderte Unternehmen aus der Perspektive des Kreditgebers analysiert — und deshalb ein klares Bild davon, woran Anträge scheitern und was Vertrauen schafft.</p>
       <p>Dazu eine Ausbildung in angewandter Datenanalyse: Die Werkzeuge, die Ihre Prozesse tragen, entstehen im eigenen Haus — pragmatisch, nachvollziehbar und ohne Abhängigkeit von großen Softwareprojekten.</p>
       <div class="facts">
@@ -325,6 +370,7 @@
       Deich Dynamics Solutions · Leon Schulte · Friesenstraße 43 · 25862 St. Peter-Ording<br>
       <a href="impressum.html">Impressum</a> &nbsp;·&nbsp; <a href="datenschutz.html">Datenschutz</a>
     </div>
+    <img class="foot-siegel" src="assets/DDS-Siegel-web.png" alt="" aria-hidden="true" loading="lazy">
   </div>
 </footer>
 
